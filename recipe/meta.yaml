@@ -1,4 +1,4 @@
-{% set version = '0.1.1' %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/S7_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/S7/S7_{{ version }}.tar.gz
-  sha256: dce9613f389d3c49bf70e2dc57852b79b6e70474abb92887e13cb3d50d2a7b64
+  sha256: b8675a7fac7a396e524b21cd353ef0823d2acf76088b5f229d2a55a182a4d49b
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,11 +45,8 @@ test:
 about:
   home: https://github.com/rconsortium/S7/, https://rconsortium.github.io/S7/
   license: MIT
-  summary: A new object oriented programming system designed to be a successor to S3 and S4.
-    It includes formal class, generic, and method specification, and a limited form
-    of multiple dispatch. It has been designed and implemented collaboratively by the
-    R Consortium Object-Oriented Programming Working Group, which includes representatives
-    from R-Core, 'Bioconductor', 'Posit'/'tidyverse', and the wider R community.
+  summary: A new object oriented programming system designed to be a successor to S3 and S4. It includes formal class, generic, and method specification, and a limited form of multiple dispatch. It has been designed and implemented collaboratively by the R Consortium Object-Oriented Programming Working Group, which includes
+    representatives from R-Core, 'Bioconductor', 'Posit'/'tidyverse', and the wider R community.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
